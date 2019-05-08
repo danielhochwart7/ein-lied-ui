@@ -1,0 +1,18 @@
+ .create-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin: 2em;
+  border-radius: 2em;
+}
+
+button {
+  position: relative;
+  float: right;
+  height: 3em;
+  width: 3em;
+}
+
+.formatted-button {
+  margin: 0 1em 0 0;
+}
