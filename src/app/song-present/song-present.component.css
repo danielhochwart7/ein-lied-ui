@@ -1,4 +1,4 @@
-.create-container {
+.present-container {
     flex-direction: column;
     padding: 4em;
     margin: 2em 2em 2em 0;
@@ -9,7 +9,7 @@
     font-family: Garamond;
 }
 
-.create-container > h1 {
+.present-container > h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     color: #364958;
 }
@@ -32,13 +32,8 @@ button {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-mat-form-field {
-    width: 75%;
-}
-
 .button-div {
     position: static;
     float: right;
-    margin: -10em;
-
+    margin: 25em -5.5em;
 }

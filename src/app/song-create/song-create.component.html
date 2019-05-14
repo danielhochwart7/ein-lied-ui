@@ -1,14 +1,19 @@
-<div class="create-container shadow-lg">
-    <h1>Test create</h1>
+<div class="create-container">
+    <h1>Create Song</h1>
     <mat-form-field>
-      <input matInput placeholder="Title">
+        <input matInput placeholder="Title">
     </mat-form-field>
-  
+
     <mat-form-field>
-      <textarea matInput placeholder="Lyric"></textarea>
+        <mat-label>Lyric</mat-label>
+        <textarea matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="0"
+                  cdkAutosizeMaxRows="10"></textarea>
     </mat-form-field>
-    <div>
-        <button class="formatted-button" mat-stroked-button color="primary">Close</button>
-        <button class="formatted-button" mat-stroked-button color="primary">Save</button>
+    <div class="button-div">
+        <button class="formatted-button" mat-raised-button>Close</button>
+        <button class="formatted-button" mat-raised-button>Create</button>
     </div>
 </div>
