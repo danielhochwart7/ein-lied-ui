@@ -6,8 +6,16 @@ import { Song } from './song';
     providedIn: 'root'
 })
 export class ApiService {
+    get currentSong(): Song {
+        return this._currentSong;
+    }
+
+    set currentSong(value: Song) {
+        this._currentSong = value;
+    }
 
     apiURL: string = 'https://ein-lied.herokuapp.com';
+    private _currentSong: Song;
 
     constructor(private httpClient: HttpClient) { }
 

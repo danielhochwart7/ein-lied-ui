@@ -4,21 +4,24 @@
     <input matInput [(ngModel)]="searchText" placeholder="Search song by keyword">
   </mat-form-field>
   <ul>
+    <div class="responsive-cards-div">
     <li *ngFor="let song of songs | songFilter: searchText" (click)="onSelect(song)" class="list-group">
-        <mat-card class="song-card">
-          <mat-card-header>
-            <div mat-card-avatar class="song-header-image"></div>
-            <mat-card-title>{{ song.title }}</mat-card-title>
-            <mat-card-subtitle>{{ song.author }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            {{ song.lyric[0] }}<br>
-            {{ song.lyric[1] }}
-          </mat-card-content>
-          <div class="button-div">
-            <button mat-raised-button class="formatted-button">Present</button>
-          </div>
-        </mat-card>
+      <mat-card class="song-card">
+        <mat-card-header>
+          <div mat-card-avatar class="song-header-image"></div>
+          <mat-card-title>{{ song.title }}</mat-card-title>
+          <mat-card-subtitle>{{ song.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          {{ song.lyric[0] }}<br>
+          {{ song.lyric[1] }}
+        </mat-card-content>
+        <div class="button-div">
+          <button mat-raised-button routerLink="/song-present" routerLinkActive="active" class="formatted-button" (click)="onSelect(song)">Present</button>
+        </div>
+      </mat-card>
     </li>
+    </div>
   </ul>
+
 </div>

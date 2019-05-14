@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Output, OnInit} from '@angular/core';
+import {Song} from '../song';
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-song-present',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongPresentComponent implements OnInit {
 
-  constructor() { }
+  private song: Song;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.song = this.apiService.currentSong;
+    console.log(this.song);
   }
-
 }

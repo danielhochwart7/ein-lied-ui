@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Song} from '../song';
 import {ApiService} from '../api.service';
 
@@ -12,6 +12,7 @@ export class SongSearchComponent implements OnInit {
     selectedSong: Song = null;
 
     @Input() songDetails = { title: '', lyric: ''};
+
     private songs: Song[];
     constructor(private apiService: ApiService) {}
 
@@ -61,6 +62,7 @@ export class SongSearchComponent implements OnInit {
 
     onSelect(song: Song) {
         this.selectedSong = song;
+        this.apiService.currentSong = this.selectedSong;
     }
 
     deleteAllSongs() {
@@ -71,5 +73,4 @@ export class SongSearchComponent implements OnInit {
         this.getSongs();
         this.flushSongDetails();
     }
-
 }
