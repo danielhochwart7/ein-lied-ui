@@ -35,10 +35,10 @@
 }
 
 .song-card {
-    max-width: 16em;
-    max-height: 16em;
+    width: 16em;
+    height: 16em;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
-    margin: 1em;
+    margin: 2em;
     border-radius: 1em;
 }
 
@@ -48,5 +48,10 @@
 }
 
 .responsive-cards-div {
-    display: inline-block;
+    display: inline-flex;
 }
+
+.full-width {
+    width: 70%;
+}
+
