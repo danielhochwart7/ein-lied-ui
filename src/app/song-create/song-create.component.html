@@ -5,6 +5,10 @@
     </mat-form-field>
 
     <mat-form-field>
+        <input matInput [(ngModel)]="songDetails.author" placeholder="Author">
+    </mat-form-field>
+
+    <mat-form-field>
         <mat-label>Lyric</mat-label>
         <textarea matInput
                   cdkTextareaAutosize
@@ -12,8 +16,5 @@
                   cdkAutosizeMinRows="0"
                   cdkAutosizeMaxRows="10" [(ngModel)]="songDetails.lyric"></textarea>
     </mat-form-field>
-    <div class="button-div">
-        <button class="formatted-button" mat-raised-button>Close</button>
-        <button class="formatted-button" mat-raised-button (click)="addSong()">Create</button>
-    </div>
+    <button class="formatted-button" mat-fab (click)="addSong()">Create</button>
 </div>

@@ -17,10 +17,10 @@
                     {{ song.lyric[0] }}<br>
                     {{ song.lyric[1] }}
                 </mat-card-content>
-                <div class="button-div">
-                    <button mat-raised-button routerLink="/song-present" routerLinkActive="active" class="formatted-button" (click)="onSelect(song)">Present</button>
-                </div>
             </mat-card>
+            <div class="button-div">
+                <button mat-raised-button routerLink="/song-present" routerLinkActive="active" class="formatted-button" (click)="onSelect(song)">Present</button>
+            </div>
         </li>
     </ul>
 </div>

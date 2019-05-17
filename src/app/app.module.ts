@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ScrollDispatchModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
